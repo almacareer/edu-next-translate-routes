@@ -26,8 +26,7 @@
     "format": "yon prettier -c --write .",
     "lint": "yon eslint --ignore-path .gitignore .",
     "test": "jest",
-    "prerelease": "yon lint && yon build",
-    "release": "npx release-it",
+    "test:watch": "jest --watchAll",
     "start": "yon install && yon build && cd ./example && yon install && yon build && yon start"
   },
   "dependencies": {
