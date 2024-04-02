@@ -290,13 +290,15 @@ Both of them take 2 arguments: an url and a locale. `fileUrlToUrl` can take an e
 You will probably want to indicate alternate pages for SEO optimization. Here is how you can do that:
 
 ```tsx
-  const { pathname, query, locale, locale } = useRouter()
+const { pathname, query, locale, locale } = useRouter()
 
-  return (
-    <Head>
-      {locales.map((l) => l !== locale && <link rel="alternate" hrefLang={l} href={fileUrlToUrl({ pathname, query }, l)} />)}
-    </Head>
-  )
+return (
+  <Head>
+    {locales.map(
+      (l) => l !== locale && <link rel="alternate" hrefLang={l} href={fileUrlToUrl({ pathname, query }, l)} />,
+    )}
+  </Head>
+)
 ```
 
 You can do it in the `_app` component if you are sure to do that for all your pages. You can also use a dedicated package, like [next-seo](https://github.com/garmeeh/next-seo).
@@ -460,7 +462,7 @@ You will have to execute createNtrData in a node script and store the result som
 ```typescript
 // nextRouterMock.ts
 import withTranslateRoutes from '@almacareer/edu-next-translate-routes'
-import { RouterContext } from 'next/dist/shared/lib/router-context'
+import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime'
 import ntrData from 'path/to/your/ntrData'
 
 //[...]
@@ -493,7 +495,7 @@ export const WithNextRouter: DecoratorFn = (Story, context): JSX.Element => (
 ```typescript
 // nextRouterMock.ts
 import withTranslateRoutes from '@almacareer/edu-next-translate-routes'
-import { RouterContext } from 'next/dist/shared/lib/router-context'
+import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime'
 
 //[...]
 
