@@ -22,7 +22,7 @@ describe('fileUrlToUrl', () => {
           origin: 'https://next-translate-routes.com',
           pathname: '/current/path',
         } as Window['location'],
-      } as Window & typeof globalThis),
+      }) as Window & typeof globalThis,
   )
 
   const testDataItems: { url: string | (UrlObject & { pathname: string }); translation: string; locale?: string }[] = [

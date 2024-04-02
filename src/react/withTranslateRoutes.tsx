@@ -1,4 +1,5 @@
 import type { NextComponentType } from 'next'
+import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime'
 import { AppContextType, AppInitialProps } from 'next/dist/shared/lib/utils'
 import { NextRouter, useRouter as useNextRouter } from 'next/router'
 import React, { useMemo } from 'react'
@@ -7,8 +8,6 @@ import { setNtrData } from '../shared/ntrData'
 import { ntrMessagePrefix } from '../shared/withNtrPrefix'
 import type { TNtrData } from '../types'
 import { enhanceNextRouter } from './enhanceNextRouter'
-
-const { RouterContext } = require(ROUTER_CONTEXT_PATH)
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type TWrappedAppComponent = NextComponentType<AppContextType<NextRouter>, AppInitialProps, any>
@@ -19,21 +18,24 @@ type TWrappedAppComponent = NextComponentType<AppContextType<NextRouter>, AppIni
  */
 export const withTranslateRoutes = (...args: (TWrappedAppComponent | TNtrData)[]) => {
   // ntrData argument is added as a argument by webpack next-translate-routes/loader, and can also be added manually
-  const { ntrData, AppComponent } = args.reduce((acc, arg) => {
-    if (typeof arg === 'function') {
+  const { ntrData, AppComponent } = args.reduce(
+    (acc, arg) => {
+      if (typeof arg === 'function') {
+        return {
+          ...acc,
+          AppComponent: arg,
+        }
+      }
       return {
         ...acc,
-        AppComponent: arg,
+        ntrData: {
+          ...acc.ntrData,
+          ...arg,
+        },
       }
-    }
-    return {
-      ...acc,
-      ntrData: {
-        ...acc.ntrData,
-        ...arg,
-      },
-    }
-  }, {} as { ntrData: TNtrData; AppComponent: TWrappedAppComponent })
+    },
+    {} as { ntrData: TNtrData; AppComponent: TWrappedAppComponent },
+  )
 
   if (!AppComponent) {
     throw new Error(ntrMessagePrefix + 'No wrapped App component in withTranslateRoutes')
