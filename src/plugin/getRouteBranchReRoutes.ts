@@ -1,6 +1,5 @@
 import type { Redirect, Rewrite } from 'next/dist/lib/load-custom-routes'
 import { pathToRegexp } from 'path-to-regexp'
-
 import { getNtrData } from '../shared/ntrData'
 import { ignoreSegmentPathRegex } from '../shared/regex'
 import type { TAnyLocale, TReRoutes, TRouteBranch, TRouteSegment } from '../types'
