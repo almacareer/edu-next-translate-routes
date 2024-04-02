@@ -68,7 +68,7 @@
     "react-dom": "^18.2.0",
     "rimraf": "^3.0.2",
     "ts-jest": "^29.1.2",
-    "typescript": "5.4.3",
+    "typescript": "^5.4.3",
     "webpack": "^5.91.0",
     "yarn-or-npm": "^3.0.1"
   },
