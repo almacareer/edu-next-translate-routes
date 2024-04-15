@@ -41,7 +41,7 @@ __metadata:
     react-dom: ^18.2.0
     rimraf: ^3.0.2
     ts-jest: ^29.1.2
-    typescript: 5.4.5
+    typescript: ^5.4.5
     url: ^0.11.3
     webpack: ^5.91.0
     yamljs: ^0.3.0
@@ -6571,7 +6571,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.4.5":
+"typescript@npm:^5.4.5":
   version: 5.4.5
   resolution: "typescript@npm:5.4.5"
   bin:
@@ -6581,7 +6581,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@5.4.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@^5.4.5#~builtin<compat/typescript>":
   version: 5.4.5
   resolution: "typescript@patch:typescript@npm%3A5.4.5#~builtin<compat/typescript>::version=5.4.5&hash=29ae49"
   bin:
