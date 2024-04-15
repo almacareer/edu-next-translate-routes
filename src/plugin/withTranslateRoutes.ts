@@ -57,7 +57,7 @@ export const withTranslateRoutes = (userNextConfig: NextConfigWithNTR): NextConf
   return {
     ...nextConfig,
 
-    transpilePackages: [...(nextConfig.transpilePackages || []), 'next-translate-routes'],
+    transpilePackages: [...(nextConfig.transpilePackages || []), '@almacareer/edu-next-translate-routes'],
 
     webpack(conf: WebpackConfiguration, context) {
       const config =
@@ -78,7 +78,7 @@ export const withTranslateRoutes = (userNextConfig: NextConfigWithNTR): NextConf
           `${pagesPath.replace(/[/\\]/g, '(\\\\|\\/)')}_app\\.(${context.config.pageExtensions.join('|')})$`,
         ),
         use: {
-          loader: 'next-translate-routes/loader',
+          loader: '@almacareer/edu-next-translate-routes/loader',
           options: {
             data: ntrData,
           },
