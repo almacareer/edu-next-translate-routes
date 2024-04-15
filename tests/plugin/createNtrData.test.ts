@@ -22,8 +22,9 @@ const pagesPath = path.resolve(process.cwd(), './tests/fixtures/pages')
 
 describe('createNtrData.', () => {
   test('with fallbackLng.', () => {
-    const i18n = { locales: ['en', 'fr', 'fr-FR'], defaultLocale: 'en', fallbackLng: { 'fr-FR': ['fr'] } }
+    const i18n = { locales: ['en', 'cs', 'sk'], defaultLocale: 'cs', fallbackLng: { 'en-US': ['en'] } }
     const ntrData = createNtrData({ i18n }, pagesPath)
+
     expect(ntrData.routesTree).toEqual(routesTree)
     expect(ntrData.locales).toEqual(i18n.locales)
     expect(ntrData.defaultLocale).toEqual(i18n.defaultLocale)
@@ -33,8 +34,9 @@ describe('createNtrData.', () => {
 
   test('with debug and custom routesTree.', () => {
     const customRoutesTree = {}
-    const i18n = { locales: ['en', 'fr'], defaultLocale: 'fr' }
+    const i18n = { locales: ['en', 'cs'], defaultLocale: 'cs' }
     const ntrData = createNtrData({ i18n, translateRoutes: { routesTree: customRoutesTree, debug: true } }, pagesPath)
+
     expect(ntrData.routesTree).toEqual(customRoutesTree)
     expect(ntrData.locales).toEqual(i18n.locales)
     expect(ntrData.defaultLocale).toEqual(i18n.defaultLocale)

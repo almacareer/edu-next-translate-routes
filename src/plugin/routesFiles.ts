@@ -30,7 +30,7 @@ export const getPagesDir = () => {
     throw new Error(
       ntrMessagePrefix +
         '`/pages` directory not found.' +
-        (pagesDirs.appDir ? ' next-translate-routes does not support `/app` directory yet.' : ''),
+        (pagesDirs.appDir ? ' edu-next-translate-routes does not support `/app` directory yet.' : ''),
     )
   }
 

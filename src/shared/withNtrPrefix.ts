@@ -1,1 +1,1 @@
-export const ntrMessagePrefix = '[next-translate-routes] - '
+export const ntrMessagePrefix = '[edu-next-translate-routes] - '
