@@ -20,7 +20,7 @@ describe('translate', () => {
           origin: 'https://next-translate-routes.com',
           pathname: '/current/path',
         } as Window['location'],
-      } as Window & typeof globalThis),
+      }) as Window & typeof globalThis,
   )
   ;[
     {
@@ -217,7 +217,7 @@ describe('translateFallbackLng', () => {
           origin: 'https://next-translate-routes.com',
           pathname: '/current/path',
         } as Window['location'],
-      } as Window & typeof globalThis),
+      }) as Window & typeof globalThis,
   )
   ;[
     {
