@@ -296,7 +296,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.79":
+"@types/react@npm:^18.2.79":
   version: 18.2.79
   resolution: "@types/react@npm:18.2.79"
   dependencies:
@@ -3756,7 +3756,7 @@ __metadata:
     "@almacareer/edu-next-translate-routes": "portal:../symlink-used-by-example"
     "@next/eslint-plugin-next": ^14.2.1
     "@types/node": ^20.12.7
-    "@types/react": 18.2.79
+    "@types/react": ^18.2.79
     "@types/react-dom": ^18.2.25
     eslint: ^8.57.0
     eslint-config-next: ^14.2.1
