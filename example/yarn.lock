@@ -296,13 +296,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18.2.78":
-  version: 18.2.78
-  resolution: "@types/react@npm:18.2.78"
+"@types/react@npm:18.2.79":
+  version: 18.2.79
+  resolution: "@types/react@npm:18.2.79"
   dependencies:
     "@types/prop-types": "*"
     csstype: ^3.0.2
-  checksum: f686d735707d46690d05ac76e8c8a619802ea6a4a8f2837981669f7dc13b6984751edc4994242afa3be279df15c67b72a5a658f02a7c5ca16f9a0b4878f1bf18
+  checksum: 85aa96e0e88725c84d8fc5f04f10a4da6a1f507dde33557ac9cc211414756867721264bfefd9e02bae1288ce2905351d949b652b931e734ea24519ee5c625138
   languageName: node
   linkType: hard
 
@@ -3598,7 +3598,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.4.5":
+"typescript@npm:^5.4.5":
   version: 5.4.5
   resolution: "typescript@npm:5.4.5"
   bin:
@@ -3608,7 +3608,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@5.4.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@^5.4.5#~builtin<compat/typescript>":
   version: 5.4.5
   resolution: "typescript@patch:typescript@npm%3A5.4.5#~builtin<compat/typescript>::version=5.4.5&hash=29ae49"
   bin:
@@ -3756,14 +3756,14 @@ __metadata:
     "@almacareer/edu-next-translate-routes": "portal:../symlink-used-by-example"
     "@next/eslint-plugin-next": ^14.2.1
     "@types/node": ^20.12.7
-    "@types/react": ^18.2.78
+    "@types/react": 18.2.79
     "@types/react-dom": ^18.2.25
     eslint: ^8.57.0
     eslint-config-next: ^14.2.1
     next: ^14.2.1
     react: ^18.2.0
     react-dom: ^18.2.0
-    typescript: 5.4.5
+    typescript: ^5.4.5
     yarn-or-npm: ^3.0.1
   languageName: unknown
   linkType: soft
